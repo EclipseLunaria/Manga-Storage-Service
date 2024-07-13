@@ -1,12 +1,12 @@
 import express from "express";
 import process from "process";
 import dotenv from "dotenv"
-import storageRouter from "./storageRoutes";
+import router from "./routes";
 
 const app = express()
 // load environment variable or default to 6968
 const port = process.env.PORT || 6968
-app.use("/storage/", storageRouter)
+app.use("/storage/", router)
 
 app.get("/", (req, res) => {
     res.send("Hello World!")
