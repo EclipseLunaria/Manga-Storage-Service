@@ -1,0 +1,32 @@
+{
+  "name": "storage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docker-build": "docker build -t storage .",
+    "docker-run": "docker run -p 3000:3000 storage",
+    "docker-stop": "docker stop $(docker ps -a -q)"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.10",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.614.0",
+    "@aws-sdk/credential-provider-env": "^3.609.0",
+    "@aws-sdk/credential-provider-node": "^3.614.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
