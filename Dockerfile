@@ -1,4 +1,4 @@
-FROM node:16-alpine
+FROM node:22-alpine
 
 WORKDIR "/app"
 
@@ -7,5 +7,5 @@ RUN npm install
 
 COPY . .
 RUN npx tsc
-EXPOSE 6967
+EXPOSE ${PORT}
 CMD ["node", "dist/index.js"]
