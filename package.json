@@ -7,10 +7,7 @@
     "start": "node dist/index.js",
     "build": "tsc",
     "dev": "nodemon",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "docker-build": "docker build -t storage .",
-    "docker-run": "docker run -p 3000:3000 storage",
-    "docker-stop": "docker stop $(docker ps -a -q)"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
